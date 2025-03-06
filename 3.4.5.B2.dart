@@ -4,29 +4,31 @@ void main () {
   List<String> names = ['Julietta', 'Benjamino', 'Hans-Günther',   
                          'Evalinea', 'Fiona', 'Gregory', 'Leonhart'];
 
-  String namesList = '';
-  for (String namesLoop in names) {
-    namesList += '$namesLoop, '; 
+
+  Map<String, int> namesList = {};
+  
+  for (int i = 0;
+       i < names.length;
+       i++) {
+    namesList[names[i]] = points[i];
   }
-  print('Names of participants: $namesList');
 
-  int sum = 0;
-  double counter = 0;
-  double averageGrade = 0;
+  for (String namesPrint in namesList.keys) {
+      print(namesPrint);
+  }
 
-  for (int x in points) {
-  if (x != null) {
-  sum += x;
-  counter++;
+  print('');
+
+  for (int pointsPrint in namesList.values) {
+      print(pointsPrint);
+  }
+
+  print('');
+
+  for (final allPrint in namesList.entries) {
+      print('Names and Grades of participants: ${allPrint.key}: ${allPrint.value}');
   }
 }
-  averageGrade = sum / counter;
-  print('Total sum of grades: $sum');
-  print('Total amount of grades: ${counter.toStringAsPrecision(1)}');
-  print('Average of all grades: ${averageGrade.toStringAsPrecision(4)}');
-
-}
-
 
 
                 //               #                                          *                          
