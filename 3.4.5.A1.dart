@@ -8,7 +8,7 @@ void main () {
   for (String namesLoop in names) {
     namesList += '$namesLoop, '; 
   }
-  print(namesList);
+  print('Names of participants: $namesList');
 
 }
 
