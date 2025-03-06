@@ -4,13 +4,18 @@ void main () {
   List<String> names = ['Julietta', 'Benjamino', 'Hans-Günther',   
                          'Evalinea', 'Fiona', 'Gregory', 'Leonhart'];
 
-  String namesList = '';
-  for (String namesLoop in names) {
-    namesList += '$namesLoop, '; 
-  }
-  print(namesList);
 
+  Map<String, int> namesList = {};
+  
+  for (int i = 0;
+       i < names.length;
+       i++) {
+    namesList[names[i]] = points[i];
+  }
+
+  print(namesList);
 }
+
 
                 //               #                                          *                          
                 //              #+#                                      @%+*#                         
